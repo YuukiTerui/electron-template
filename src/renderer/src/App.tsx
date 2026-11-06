@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import electronLogo from './assets/electron.svg'
-import type { SystemInfo } from '../../preload'
+import type { SystemInfo } from '@shared/types'
 
 function App(): React.JSX.Element {
   const [systemInfo, setSystemInfo] = useState<SystemInfo | null>(null)
@@ -239,7 +239,7 @@ Node: v${systemInfo.nodeVersion}`
         </div>
 
         {/* Feature Highlights Banner */}
-        <div className="flex items-center justify-between rounded-xl border border-cyan-800/30 bg-gradient-to-r from-cyan-950/30 to-blue-950/30 p-4 text-xs text-zinc-300">
+        <div className="flex items-center justify-between rounded-xl border border-cyan-800/30 bg-linear-to-r from-cyan-950/30 to-blue-950/30 p-4 text-xs text-zinc-300">
           <div className="flex items-center gap-3">
             <span className="rounded border border-cyan-700/40 bg-cyan-900/60 px-2 py-0.5 font-mono text-[11px] text-cyan-300">
               Vite 8 + React 19

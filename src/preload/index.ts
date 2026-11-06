@@ -1,19 +1,9 @@
 import { contextBridge, ipcRenderer } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
-
-export interface SystemInfo {
-  platform: string
-  arch: string
-  osVersion: string
-  totalMemoryGb: string
-  freeMemoryGb: string
-  electronVersion: string
-  chromeVersion: string
-  nodeVersion: string
-}
+import type { SystemInfo, IElectronAPI } from '../shared/types'
 
 // Custom APIs for renderer
-export const api = {
+export const api: IElectronAPI = {
   ping: (): Promise<string> => ipcRenderer.invoke('ping'),
   getSystemInfo: (): Promise<SystemInfo> => ipcRenderer.invoke('get-system-info'),
   selectFile: (): Promise<string | null> => ipcRenderer.invoke('select-file'),

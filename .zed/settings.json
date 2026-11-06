@@ -1,0 +1,24 @@
+{
+  "languages": {
+    "CSS": {
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "format_on_save": "on"
+    },
+    "TSX": {
+      "format_on_save": "on"
+    }
+  },
+  "lsp": {
+    "vscode-css-language-server": {
+      "settings": {
+        "css": {
+          "lint": {
+            "unknownAtRules": "ignore"
+          }
+        }
+      }
+    }
+  }
+}

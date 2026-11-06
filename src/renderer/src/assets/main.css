@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
-@utility app-drag {
+.app-drag {
   -webkit-app-region: drag;
 }
 
-@utility app-no-drag {
+.app-no-drag {
   -webkit-app-region: no-drag;
 }
 
